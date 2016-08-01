@@ -4,6 +4,7 @@
   :min-lein-version "2.6.1"
   :uberjar-name "api-standalone.jar"
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [environ "1.0.3"]
                  [compojure "1.5.1"]
                  [ring/ring-json "0.4.0"]
                  [ring/ring-ssl "0.2.1"]

@@ -1,7 +1,9 @@
 (ns api.authentication
-  (:require [ring.util.response :refer [response status]]))
+  (:require [ring.util.response :refer [response status]]
+            [environ.core :refer [env]]))
 
-(def secret-token "7AEpPN8TDR4mvPywJrfQXFOJY5IAPhxthc5Nlp60wWY")
+(def secret-token
+  (env :secret-token))
 
 (defn- authenticated? [token]
   (= token secret-token))
